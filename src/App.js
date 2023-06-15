@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react"
 
 function App() {
+
+  const [selectedProjectId, setSelectedProjectId] = React.useState(-1);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <img className="app--background" src="./background.png" />
+      {selectedProjectId==-1?
+        <div className="app--devices"> 
+          <Laptops setSelectedProjectId={setSelectedProjectId}/>
+          <Phones setSelectedProjectId={setSelectedProjectId}/>
+        </div>
+      :
+        <Project/>
+      }
     </div>
-  );
+  )
 }
 
 export default App;
