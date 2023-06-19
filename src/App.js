@@ -1,4 +1,7 @@
 import React from "react"
+import Laptops from "./Laptops"
+import Phones from "./Phones"
+import Project from "./Project"
 
 function App() {
 
@@ -6,11 +9,10 @@ function App() {
 
   return (
     <div>
-      <img className="app--background" src="./background.png" />
+      <img className="app--background" src="./background.jpg" />
       {selectedProjectId==-1?
         <div className="app--devices"> 
           <Laptops setSelectedProjectId={setSelectedProjectId}/>
-          <Phones setSelectedProjectId={setSelectedProjectId}/>
         </div>
       :
         <Project/>

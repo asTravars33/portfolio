@@ -4,6 +4,8 @@ body{
   font-family: 'Inter', 'sans-serif';
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 .app--background{
@@ -15,18 +17,29 @@ body{
 }
 .app--devices{
   position: absolute;
-  width: 50%;
-  height: 65%;
-  top: 25%;
-  left: 25%;
+  width: 40%;
+  height: 85%;
+  top: 15%;
+  left: 30%;
 }
 
 .laptops--div{
-  position: relative;
   width: 100%;
   height: 100%;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  position: relative;
+}
+.laptops--laptops{
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left:0 ;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  column-gap: 20px;
+  row-gap: 30px;
 }
 .laptops--background{
   width: 100%;
@@ -35,9 +48,31 @@ body{
   background-repeat: no-repeat;
 }
 .laptops--laptop{
-  width: 4vw;
-  height: 5vh;
+  width: 100%;
+  position: relative;
 }
+.laptops--screen{
+  width: 100%;
+  height: 100%;
+}
+.laptops--thumbnail{
+  position: absolute;
+  border-radius: 0.2rem;
+  top: 3%;
+  left: 9%;
+  width: 82%;
+  height: 78%;
+  z-index: 20;
+}
+/* first laptop image version
+.laptops--thumbnail{
+  position: absolute;
+  top: 5%;
+  left: 15%;
+  width: 69%;
+  height: 59%;
+  z-index: 20;
+}*/
 
 .phones--background{
   width: 100%;

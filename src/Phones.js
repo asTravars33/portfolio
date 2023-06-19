@@ -1,3 +1,4 @@
+import React from "react"
 import phone_data from "./phone_data.js"
 
 export default function Phones(props){
@@ -5,7 +6,7 @@ export default function Phones(props){
     const [rotation, setRotation] = React.useState(0);
 
     // Create array of html components
-    phone_pics = phone_data.map(phone => {
+    const phone_pics = phone_data.map(phone => {
         if(phone.id%4==0){
             /* front phone */
             return (
@@ -39,7 +40,7 @@ export default function Phones(props){
     })
 
     // Select the right four-set of phones to display
-    display = phone_pics.slice(rotation, rotation+4);
+    const display = phone_pics.slice(rotation, rotation+4);
 
     // Rendering
     return (
