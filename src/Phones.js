@@ -11,7 +11,7 @@ export default function Phones(props){
             /* front phone */
             return (
                 <div className="phones--front">
-                    <img className="phones--case" src="./phonecase.png" />
+                    <img className="phones--case" src="./frontcase.png" />
                     <img className="phones--thumbnail" src={phone.thumbnail} />
                 </div>
             )
@@ -48,5 +48,6 @@ export default function Phones(props){
             <img className="phones--background" src="./phonesstand.png" />
             {display}
         </div>
+        /*{display}*/
     )
 }

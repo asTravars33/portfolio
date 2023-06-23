@@ -31,7 +31,7 @@ export default function Laptops(props){
             thumbnail: "https://i.imgur.com/dZhzaD9.jpg"
         },
         {
-            id: 8,
+            id: -1,
             thumbnail: "https://i.imgur.com/dZhzaD9.jpg"
         },
         {
@@ -41,10 +41,13 @@ export default function Laptops(props){
     ]
     const laptop_pics = laptop_data.map(laptop => {
         return (
+            laptop.id!=-1?
             <div className="laptops--laptop" onClick={() => props.setSelectedProjectId(laptop.id)}>
                 <img className="laptops--screen" src="./laptop.png" />
                 <img className="laptops--thumbnail" src={laptop.thumbnail} />
             </div>
+            :
+            <div></div>
         )
     })
     return (
