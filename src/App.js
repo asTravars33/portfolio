@@ -5,14 +5,15 @@ import Project from "./Project"
 
 function App() {
 
-  const [selectedProjectId, setSelectedProjectId] = React.useState(-1);
+  const [selectedProject, setSelectedProject] = React.useState({});
 
   return (
     <div>
       <img className="app--background" src="./background.jpg" />
       {selectedProjectId==-1?
         <div className="app--devices"> 
-          <Laptops setSelectedProjectId={setSelectedProjectId}/>
+          <Laptops setSelectedProject={setSelectedProject}/>
+          <Phones setSelectedProject={setSelectedProject} />
         </div>
       :
         <Project/>
