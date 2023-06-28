@@ -39,16 +39,25 @@ function App() {
     return unattacher
   }, [])
 
+  function findProject(){
+    const findWeb = webProjects.find(project => project.id==selectedProjectId)
+    if(findWeb!==undefined){
+      return findWeb
+    }
+    return phoneProjects.find(project => project.id==selectedProjectId)
+  }
+
   return (
     <div>
       <img className="app--background" src="./background.jpg" />
+      <h3 className="app--title">{selectedProjectId==-1?"My Portfolio":findProject().name}</h3>
       {selectedProjectId==-1?
         <div className="app--devices"> 
           <Laptops data = {webProjects} setSelectedProjectId={setSelectedProjectId}/>        
           <Phones data = {phoneProjects} setSelectedProjectId={setSelectedProjectId} />
         </div>
       : 
-        <Project/>
+        <Project {...findProject()} />
       }
     </div>
   )
