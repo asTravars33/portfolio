@@ -89,6 +89,14 @@ body{
   background-size: cover;
   background-repeat: no-repeat;
 }
+.phones--arrow{
+  position: absolute;
+  top: 60%;
+  left: 30%;
+  width: 40%;
+  height: 15%;
+  z-index: 15
+}
 .phones--front{
   position: absolute;
   top: -25%;

@@ -15,4 +15,5 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
-export const projectsCollection = collection(db, "projects");
+export const phoneCollection = collection(db, "mobile");
+export const webCollection = collection(db, "web");

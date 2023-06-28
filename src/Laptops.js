@@ -1,7 +1,7 @@
 import React from "react"
 
 export default function Laptops(props){
-    const laptop_data = [
+    /*const laptop_data = [
         {
             id: 1,
             thumbnail: "https://i.imgur.com/dZhzaD9.jpg"
@@ -38,8 +38,8 @@ export default function Laptops(props){
             id: 9,
             thumbnail: "https://i.imgur.com/dZhzaD9.jpg"
         }
-    ]
-    const laptop_pics = laptop_data.map(laptop => {
+    ]*/
+    const laptop_pics = props.data.map(laptop => {
         return (
             laptop.id!=-1?
             <div className="laptops--laptop" onClick={() => props.setSelectedProjectId(laptop.id)}>
