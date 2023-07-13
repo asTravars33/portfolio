@@ -18,12 +18,19 @@ body{
 .app--devices{
   position: absolute;
   width: 40%;
-  height: 85%;
-  top: 15%;
+  height: 70%;
+  top: 18%;
   left: 30%;
 }
+.app--title{
+  position: absolute;
+  font-size: 1.5rem;
+  top: 6%;
+  left: 50%;
+  transform: translateX(-50%)
+}
 .blue{
-  background-color: #61D1F5;
+  background-color: #EDA579;
 }
 
 .laptops--div{
@@ -134,4 +141,30 @@ body{
   left: 14%;
   top: 25%;
   width: 103%;
+}
+
+.projects--container{
+  position: absolute;
+  width: 35%;
+  height: 60%;
+  max-height: 60%;
+  top: 18%;
+  left: 30%;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+}
+.projects--back{
+  position: absolute;
+  width: 5%;
+  top: 3%;
+  left: 3%;
+}
+.projects--thumbnail{
+  max-height: 50%;
+}
+.projects--links{
+  margin-top: 1rem;
 }

@@ -57,7 +57,7 @@ function App() {
           <Phones data = {phoneProjects} setSelectedProjectId={setSelectedProjectId} />
         </div>
       : 
-        <Project {...findProject()} />
+        <Project {...findProject()} setSelectedProjectId={setSelectedProjectId}/>
       }
     </div>
   )
