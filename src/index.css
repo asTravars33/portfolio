@@ -145,9 +145,8 @@ body{
 
 .projects--container{
   position: absolute;
-  width: 35%;
-  height: 60%;
-  max-height: 60%;
+  width: 40%;
+  height: 70%;
   top: 18%;
   left: 30%;
   overflow-y: scroll;
@@ -167,4 +166,5 @@ body{
 }
 .projects--links{
   margin-top: 1rem;
+  margin-bottom: 1rem;
 }
