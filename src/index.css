@@ -84,6 +84,10 @@ body{
   z-index: 20;
 }*/
 
+.carousel-inner > .item > img, .carousel-inner > .item > a > img {
+  width: 100%;
+}
+
 .phones--div{
   left: 50%;
   bottom: 0;
@@ -137,7 +141,8 @@ body{
 }
 .phones--thumbnail{
   position: absolute;
-  height: 203%;
+  object-fit: fill;
+  height: 257%;
   left: 14%;
   top: 25%;
   width: 103%;
@@ -163,6 +168,10 @@ body{
 }
 .projects--thumbnail{
   max-height: 50%;
+  max-width: 80%;
+}
+.projects--thumbnail img{
+  max-height: 30vh;
 }
 .projects--links{
   margin-top: 1rem;

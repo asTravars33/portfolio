@@ -21,6 +21,7 @@ function App() {
           id: doc.id
         }
       })
+      console.log(phonesArr)
       setPhoneProjects(phonesArr)
     })
     return unattacher
