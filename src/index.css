@@ -84,10 +84,6 @@ body{
   z-index: 20;
 }*/
 
-.carousel-inner > .item > img, .carousel-inner > .item > a > img {
-  width: 100%;
-}
-
 .phones--div{
   left: 50%;
   bottom: 0;
@@ -103,13 +99,19 @@ body{
   background-size: cover;
   background-repeat: no-repeat;
 }
-.phones--arrow{
+.phones--arrow--left{
   position: absolute;
   top: 60%;
-  left: 30%;
-  width: 40%;
-  height: 15%;
+  left: 20%;
+  width: 20%;
   z-index: 15
+}
+.phones--arrow--right{
+  position: absolute;
+  top: 60%;
+  width: 20%;
+  z-index: 15;
+  left: 60%;
 }
 .phones--front{
   position: absolute;
@@ -168,7 +170,7 @@ body{
 }
 .projects--thumbnail{
   max-height: 50%;
-  max-width: 80%;
+  max-width: 90%;
 }
 .projects--thumbnail img{
   max-height: 30vh;

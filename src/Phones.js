@@ -34,14 +34,15 @@ export default function Phones(props){
             </div>
         )
     })*/
-    function updateRotation(){
-        setRotation(prevRotation => (prevRotation+1)%props.data.length);
+    function rotate(shift){
+        setRotation(prevRotation => (prevRotation+props.data.length+shift)%props.data.length);
     }
     // Rendering
     return (
         <div className="phones--div">
             <img className="phones--background" src="./phonesstand.png" />
-            <img onClick={updateRotation} className="phones--arrow" src="./arrow.png" />
+            <img onClick={() => rotate(-1)} className="phones--arrow--left" src="./arrow-left.png" />
+            <img onClick={() => rotate(1)} className="phones--arrow--right" src="./arrow-right.png" />
             <div className="phones--front" onClick={() => props.setSelectedProjectId(props.data[rotation].id)}>
                 <img className="phones--case" src="./frontcase.png" />
                 <img className="phones--thumbnail" src={props.data[rotation]!==undefined?props.data[rotation].thumbnail:""} />
