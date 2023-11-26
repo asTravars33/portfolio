@@ -177,5 +177,22 @@ body{
 }
 .projects--links{
   margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
+}
+.tag-div{
+  display: inline-block;
+  padding: 0.2rem;
+  margin: 0.2rem;
+  border-radius: 3px;
+  background-color: silver;
+}
+.tag-div p{
+  margin: auto;
+  font-size: 0.8rem;
+}
+.tags{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
 }

@@ -1,6 +1,12 @@
 import React from "react"
 
 export default function Project(props){
+    function getTags(tagsList){
+        const tags = tagsList.split(' ');
+        return tags.map( elem => <div className="tag-div">
+            <p>{elem}</p>
+        </div>)
+    }
     return (
        /* <div className="projects--container blue">
             <img className="projects--back" src="./back.png" onClick={() => props.setSelectedProjectId(-1)} />
@@ -46,6 +52,9 @@ export default function Project(props){
                 <span> | </span>
                 <a href={props.demo}>Demonstration Video</a>
             </div>
+            {props.skills !== undefined && <div className="tags">
+                {getTags(props.skills)}
+            </div>}
             <p className="projects--desc">{props.desc}</p>
         </div>
     )
